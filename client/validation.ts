@@ -38,6 +38,8 @@ export function validateResponse(
   data: unknown,
   isNotification?: boolean,
 ): RpcSuccess {
+
+  console.log(JSON.stringify(data))
   if (isNotification && data !== undefined) {
     throw new BadServerDataError(
       null,
